@@ -50,6 +50,8 @@ try:
     import intel_extension_for_pytorch as ipex
     if torch.xpu.is_available():
         xpu_available = True
+        from attention import attention_init
+        ok, e = attention_init()
 except:
     pass
 
